@@ -1,0 +1,11 @@
+<h5> Tells-a-fortune questions </h5>
+<div>
+  <%= @item %>
+</div>
+<%= form_with url: new_fortune_path, method: :get do |form| %>
+  <%= form.radio_button :query, 'Yes' %> Yes
+  <%= form.radio_button :query, 'No' %> No
+    <%= form.submit "Submit" %>
+<% end %>
+  
+    <p> <%= @result %> </p>
